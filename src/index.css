@@ -1,0 +1,41 @@
+
+@import "keep-react/css";
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  
+*{
+margin: 0;
+padding: 0;
+}
+/* Animation */
+.neon-border {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-width: 3px;
+  animation: neon 5s linear infinite;
+}
+
+@keyframes neon {
+  0% {
+      border-image-source: linear-gradient(45deg, #00ffff, #ff00ff);
+  
+  }
+  25% {
+      border-image-source: linear-gradient(45deg, #ff00ff, #51ff00);
+
+  }
+  50% {
+      border-image-source: linear-gradient(45deg, #ffff00, #00ff00);
+  }
+  75% {
+      border-image-source: linear-gradient(45deg, #00c3ff, #00ffff);
+  }
+  100% {
+      border-image-source: linear-gradient(45deg, #00ffff, #ff00ff);
+  }
+}
